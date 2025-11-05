@@ -5,7 +5,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.example.vebprogramiranje2025.model.Chef;
 import org.example.vebprogramiranje2025.service.ChefService;
+import org.example.vebprogramiranje2025.service.DishService;
 import org.thymeleaf.context.WebContext;
 import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.web.IWebExchange;
@@ -16,10 +18,12 @@ import java.io.IOException;
 @WebServlet(name = "ChefListServlet", urlPatterns = "/listChefs")
 public class ChefListServlet extends HttpServlet {
     private final ChefService chefService;
+    private final DishService dishService;
     private final SpringTemplateEngine templateEngine;
 
-    public ChefListServlet(ChefService chefService, SpringTemplateEngine templateEngine) {
+    public ChefListServlet(ChefService chefService, DishService dishService, SpringTemplateEngine templateEngine) {
         this.chefService = chefService;
+        this.dishService = dishService;
         this.templateEngine = templateEngine;
     }
 

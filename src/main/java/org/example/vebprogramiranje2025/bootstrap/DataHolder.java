@@ -16,7 +16,7 @@ public class DataHolder {
 
     @PostConstruct
     public void init() {
-        chefs.add(new Chef(1L, "Martin", "Patovski", "A good chef", new ArrayList<>()));
+        chefs.add(new Chef( 1L, "Martin", "Patovski", "A good chef", new ArrayList<>()));
         chefs.add(new Chef(5L, "Anna", "Ristic", "A pastry expert known for her creative desserts.", new ArrayList<>()));
         chefs.add(new Chef(6L, "David", "Peterson", "A grill master who specializes in American BBQ.", new ArrayList<>()));
         chefs.add(new Chef(7L, "Elena", "Popova", "A vegan chef focused on healthy and sustainable cooking.", new ArrayList<>()));

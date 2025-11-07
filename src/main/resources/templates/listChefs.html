@@ -22,7 +22,7 @@
     <h2>Choose a chef:</h2>
     <form action="/dish" method="POST">
         <input th:each="chef : ${chefs}" type="radio" name="chefId" th:value="${chef.getId()}" style="white-space: pre"
-               th:utext="'Name: ' + ${chef.getFirstName()} + ' ' + ${chef.getLastName()} + ', Bio: ' + ${chef.getBio()} + '<br />'"/>
+               th:utext="'Name: ' + ${chef.getFirstName()} + ' '+ 'Surname: ' + ${chef.getLastName()} + '<br />'"/>
         <input type="submit" value="Submit">
     </form>
 </main>
